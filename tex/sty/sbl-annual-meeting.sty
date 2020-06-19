@@ -1,0 +1,196 @@
+%Declare the package that this file will produce, along with its formal name:
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sbl-annual-meeting}[2020/05/31 SBL Annual Meeting Style]
+%Set fonts and font features:
+\RequirePackage{mathspec}
+\RequirePackage{amsfonts}
+\setmainfont[Ligatures=TeX, Numbers={OldStyle, Monospaced}]{Cochineal}
+\setmathfont(Digits,Latin,Greek)[Numbers={Lining, Monospaced}]{Cochineal}
+\setsansfont[Ligatures=TeX, Numbers={OldStyle, Monospaced}, Scale=MatchLowercase]{Acherus Grotesque}
+\newfontfamily\titlefont[Ligatures=TeX, Numbers={OldStyle, Monospaced}]{Acherus Grotesque Ultra Light}
+\newfontfamily\sectitlefont[Ligatures=TeX,Numbers={OldStyle, Monospaced}, Scale=MatchLowercase]{Gineso Cond Light}
+\newfontfamily\greekfont[Ligatures=TeX,Numbers={OldStyle, Monospaced}]{Cochineal}
+\newfontfamily\hebrewfont[Script=Hebrew, Ligatures=TeX, Numbers={OldStyle, Monospaced}]{Keter YG}
+%Define a macro for adjusting the forward slash baseline (needed for Cochineal):
+\newcommand{\ForwardSlash}{\raise-0.15em\hbox{/}}
+%Ensure proper use of superscripts:
+%\RequirePackage{xltxtra} %compatibility issue with bidi (https://github.com/tex-xet/bidi/issues/2)
+\renewcommand{\textsuperscript}[1]{{\setmainfont[VerticalPosition=Superior]{Linux Libertine O}#1}}
+\renewcommand*{\@makefnmark}{\textsuperscript{\@thefnmark}}
+%For drawing overlines for nomina sacra:
+\newcommand{\textoverline}[1]{$\overline{\mbox{#1}}$}
+%Don't add extra space after a period:
+\frenchspacing
+%Include support for custom colors:
+\RequirePackage{color}
+\definecolor{ChicagoMaroon}{RGB}{134,31,65}
+\definecolor{BurntOrange}{RGB}{232,119,34}
+\definecolor{HokieStone}{RGB}{117,120,123}
+%Define macros for inline Greek and Hebrew:
+\newcommand{\Grk}[1]{\textgreek{#1}}
+\newcommand{\Heb}[1]{\texthebrew{#1}}
+%Include support for wrapping text around figures:
+\RequirePackage{wrapfig}
+\setlength{\columnsep}{\parindent}
+%Include support for external graphics:
+\RequirePackage{graphicx}
+%Include support for sideways figures:
+\RequirePackage{rotating}
+%Include support for multi-page figure captions:
+\RequirePackage{caption}
+%Include support for title formatting:
+\RequirePackage{titlesec}
+\titleformat{\section}{\sectitlefont\Large\raggedright}{\thesection}{1em}{}
+\titleformat{\subsection}{\sectitlefont\large\color{HokieStone}\raggedright}{\thesubsection}{1em}{}
+
+%Include support for list customization:
+\RequirePackage{enumitem}
+\setlist{noitemsep}
+%Define scripture reference macros:
+\newcommand{\Genesis}{Gen}
+\newcommand{\Exodus}{Exod}
+\newcommand{\Leviticus}{Lev}
+\newcommand{\Numbers}{Num}
+\newcommand{\Deuteronomy}{Deut}
+\newcommand{\Joshua}{Josh}
+\newcommand{\Judges}{Judg}
+\newcommand{\Ruth}{Ruth}
+\newcommand{\FirstSamuel}{1 Sam}
+\newcommand{\SecondSamuel}{2 Sam}
+\newcommand{\FirstKings}{1 Kgs}
+\newcommand{\SecondKings}{2 Kgs}
+\newcommand{\FirstChronicles}{1 Chr}
+\newcommand{\SecondChronicles}{2 Chr}
+\newcommand{\Ezra}{Ezra}
+\newcommand{\Nehemiah}{Neh}
+\newcommand{\Esther}{Esth}
+\newcommand{\Job}{Job}
+\newcommand{\Psalm}{Ps}
+\newcommand{\Psalms}{Pss}
+\newcommand{\Proverbs}{Prov}
+\newcommand{\Ecclesiates}{Eccl}
+\newcommand{\SongOfSolomon}{Song}
+\newcommand{\Isaiah}{Isa}
+\newcommand{\Jeremiah}{Jer}
+\newcommand{\Lamentations}{Lam}
+\newcommand{\Ezekiel}{Ezek}
+\newcommand{\Daniel}{Dan}
+\newcommand{\Hosea}{Hos}
+\newcommand{\Joel}{Joel}
+\newcommand{\Amos}{Amos}
+\newcommand{\Obadiah}{Obad}
+\newcommand{\Jonah}{Jonah}
+\newcommand{\Micah}{Mic}
+\newcommand{\Nahum}{Nah}
+\newcommand{\Habakkuk}{Hab}
+\newcommand{\Zephaniah}{Zeph}
+\newcommand{\Haggai}{Hag}
+\newcommand{\Zechariah}{Zech}
+\newcommand{\Malachi}{Mal}
+\newcommand{\Matthew}{Matt}
+\newcommand{\Mark}{Mark}
+\newcommand{\Luke}{Luke}
+\newcommand{\John}{John}
+\newcommand{\Acts}{Acts}
+\newcommand{\Romans}{Rom}
+\newcommand{\FirstCorinthians}{1 Cor}
+\newcommand{\SecondCorinthians}{2 Cor}
+\newcommand{\Galatians}{Gal}
+\newcommand{\Ephesians}{Eph}
+\newcommand{\Philippians}{Phil}
+\newcommand{\Colossians}{Col}
+\newcommand{\FirstThessalonians}{1 Thess}
+\newcommand{\SecondThessalonians}{2 Thess}
+\newcommand{\FirstTimothy}{1 Tim}
+\newcommand{\SecondTimothy}{2 Tim}
+\newcommand{\Titus}{Titus}
+\newcommand{\Philemon}{Phlm}
+\newcommand{\Hebrews}{Heb}
+\newcommand{\James}{Jas}
+\newcommand{\FirstPeter}{1 Pet}
+\newcommand{\SecondPeter}{2 Pet}
+\newcommand{\FirstJohn}{1 John}
+\newcommand{\SecondJohn}{2 John}
+\newcommand{\ThirdJohn}{3 John}
+\newcommand{\Jude}{Jude}
+\newcommand{\Revelation}{Rev}
+%Define sigla macros:
+\newcommand{\Aleph}{ℵ}
+\newcommand{\Alex}{\textrm{\textit{Alex}}}
+\newcommand{\Ambr}[1]{\textrm{Ambr\textsuperscript{#1}}}
+\newcommand{\Ambst}[1]{\textrm{Ambst\textsuperscript{#1}}}
+\newcommand{\Ar}[1]{\textrm{ar\textsuperscript{#1}}}
+\newcommand{\Ath}[1]{\textrm{Ath\textsuperscript{#1}}}
+\newcommand{\Aug}[1]{\textrm{Aug\textsuperscript{#1}}}
+\newcommand{\Bo}[1]{\textrm{bo\textsuperscript{#1}}}
+\newcommand{\Byz}[1]{\textrm{Byz\textsuperscript{#1}}}
+\newcommand{\Cass}[1]{\textrm{Cass\textsuperscript{#1}}}
+\newcommand{\Clem}[1]{\textrm{Cl\textsuperscript{#1}}}
+\newcommand{\Co}[1]{\textrm{co\textsuperscript{#1}}}
+\newcommand{\Cyp}[1]{\textrm{Cyp\textsuperscript{#1}}}
+\newcommand{\Cyr}[1]{\textrm{Cyr\textsuperscript{#1}}}
+\newcommand{\Did}[1]{\textrm{Did\textsuperscript{#1}}}
+\newcommand{\Eus}[1]{\textrm{Eus\textsuperscript{#1}}}
+\newcommand{\Fam}[1]{\textrm{\textit{f}\textsuperscript{#1}}}
+\newcommand{\Heir}[1]{\textrm{Heir\textsuperscript{#1}}}
+\newcommand{\It}[1]{\textrm{it\textsuperscript{#1}}}
+\newcommand{\Iren}[1]{\textrm{Ir\textsuperscript{#1}}}
+\newcommand{\Lat}[1]{\textrm{lat\textsuperscript{#1}}}
+\newcommand{\Latt}[1]{\textrm{latt\textsuperscript{#1}}}
+\newcommand{\Lect}[1]{\textrm{\textit{l}{#1}}}
+\newcommand{\Lects}{\textrm{\textit{Lect}}}
+\newcommand{\Mae}[1]{\textrm{mae\textsuperscript{#1}}}
+\newcommand{\Maj}[1]{\textrm{$\mathfrak{M}$\textsuperscript{#1}}}
+\newcommand{\Ms}[1]{\textrm{#1}}
+\newcommand{\Na}[1]{NA\textsuperscript{#1}}
+\newcommand{\Orig}[1]{\textrm{Or\textsuperscript{#1}}}
+\newcommand{\Pap}[1]{\textrm{$\mathfrak{P}$\textsuperscript{#1}}}
+\newcommand{\Pc}{\textit{pc}}
+\newcommand{\Pm}{\textit{pm}}
+\newcommand{\PsDion}[1]{\textrm{PsDion\textsuperscript{#1}}}
+\newcommand{\Sa}[1]{\textrm{sa\textsuperscript{#1}}}
+\newcommand{\Spec}[1]{\textrm{Spec\textsuperscript{#1}}}
+\newcommand{\Sy}[1]{\textrm{sy\textsuperscript{#1}}}
+\newcommand{\Tert}[1]{\textrm{Tert\textsuperscript{#1}}}
+\newcommand{\Ubs}[1]{UBS\textsuperscript{#1}}
+\newcommand{\Unc}[1]{\textrm{#1}}
+\newcommand{\Vg}[1]{\textrm{vg\textsuperscript{#1}}}
+\newcommand{\VsH}[1]{H\textsuperscript{#1}}
+\newcommand{\VsI}[1]{I\textsuperscript{#1}}
+\newcommand{\VsK}[1]{K\textsuperscript{#1}}
+\newcommand{\Vsa}[1]{\Grk{α}\textrm{#1}}
+\newcommand{\Vsd}[1]{\Grk{δ}\textrm{#1}}
+\newcommand{\Vse}[1]{\Grk{ε}\textrm{#1}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+
+%Include support for hyperreferences:
+\RequirePackage{url}
+\RequirePackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=ChicagoMaroon, 
+	urlcolor=BurntOrange,
+	citecolor=ChicagoMaroon,
+}
+\urlstyle{same}
+
+%Include support for hyphenation and punctuation:
+\RequirePackage{polyglossia}
+\setmainlanguage{american}
+\setotherlanguage[variant=ancient]{greek}
+\setotherlanguage{hebrew}
+
+%Include support for smart quoting:
+\RequirePackage{csquotes}
+
+%Include support for footnote citation and citation format:
+\RequirePackage[style=sbl, citepages=omit, backend=biber]{biblatex}
+
+%Modify page range citation style (include full page numbers):
+\setcounter{mincomprange}{100000} 
+
+%Add the bibliography source file:
+\addbibresource{../bib/bibliography.bib}
+
+%Finally, close the input:
+\endinput

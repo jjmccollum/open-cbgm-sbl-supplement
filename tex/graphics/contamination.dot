@@ -1,0 +1,45 @@
+digraph witness {
+	margin=0;
+	explained_table[shape=none, margin=0, label=<
+		<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+			<TR>
+				<TD BORDER="0" ALIGN="LEFT">Explained by GA 1832</TD>
+				<TD BORDER="0">      </TD>
+				<TD BORDER="0">···</TD>
+				<TD><FONT COLOR="#ff0000" FACE="EB-Garamond">✗</FONT></TD>
+				<TD><FONT COLOR="#228b22" FACE="EB-Garamond">✓</FONT></TD>
+				<TD><FONT COLOR="#228b22" FACE="EB-Garamond">✓</FONT></TD>
+				<TD><FONT COLOR="#228b22" FACE="EB-Garamond">✓</FONT></TD>
+				<TD BORDER="0">···</TD>
+			</TR>
+			<TR>
+				<TD BORDER="0" ALIGN="LEFT">Explained by GA 2544</TD>
+				<TD BORDER="0">      </TD>
+				<TD BORDER="0">···</TD>
+				<TD><FONT COLOR="#228b22" FACE="EB-Garamond">✓</FONT></TD>
+				<TD><FONT COLOR="#ff0000" FACE="EB-Garamond">✗</FONT></TD>
+				<TD><FONT COLOR="#ff0000" FACE="EB-Garamond">✗</FONT></TD>
+				<TD><FONT COLOR="#228b22" FACE="EB-Garamond">✓</FONT></TD>
+				<TD BORDER="0">···</TD>
+			</TR>
+			<HR/>
+			<TR>
+				<TD BORDER="0" ALIGN="LEFT">Explained by Either</TD>
+				<TD BORDER="0">      </TD>
+				<TD BORDER="0">···</TD>
+				<TD><FONT COLOR="#228b22" FACE="EB-Garamond">✓</FONT></TD>
+				<TD><FONT COLOR="#228b22" FACE="EB-Garamond">✓</FONT></TD>
+				<TD><FONT COLOR="#228b22" FACE="EB-Garamond">✓</FONT></TD>
+				<TD><FONT COLOR="#228b22" FACE="EB-Garamond">✓</FONT></TD>
+				<TD BORDER="0">···</TD>
+			</TR>
+		</TABLE>
+	>];
+	ga_1832[shape="ellipse", label="1832"];
+	ga_2544[shape="ellipse", label="2544"];
+	ga_2243[shape="ellipse", label="2243"];
+	explained_table -> ga_1832[style=invis];
+	explained_table -> ga_2544[style=invis];
+	ga_1832 -> ga_2243;
+	ga_2544 -> ga_2243;
+}

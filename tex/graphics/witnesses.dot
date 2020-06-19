@@ -1,0 +1,81 @@
+digraph witness {
+	layout=neato;
+	1[shape=none, label="GA 69", pos="0,2!"];
+	2[shape=none, margin=0, label=<
+		<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+			<TR>
+				<TD>3Jo 1:1/2</TD>
+				<TD>3Jo 1:1/6</TD>
+				<TD>3Jo 1:1/8</TD>
+			</TR>
+			<TR>
+				<TD>a</TD>
+				<TD>af1</TD>
+				<TD>a</TD>
+			</TR>
+		</TABLE>
+	>, pos="2,2!"];
+	3[shape=none, label="···", pos="3.5,2!"];
+	4[shape=none, margin=0, label=<
+		<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+			<TR>
+				<TD>3Jo 1:15/23</TD>
+			</TR>
+			<TR>
+				<TD>a</TD>
+			</TR>
+		</TABLE>
+	>, pos="4.25,2!"];
+	5[shape=none, label="GA 1739", pos="0,1!"];
+	6[shape=none, margin=0, label=<
+		<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+			<TR>
+				<TD>3Jo 1:1/2</TD>
+				<TD>3Jo 1:1/6</TD>
+				<TD>3Jo 1:1/8</TD>
+			</TR>
+			<TR>
+				<TD>a</TD>
+				<TD>a</TD>
+				<TD>b</TD>
+			</TR>
+		</TABLE>
+	>, pos="2,1!"];
+	7[shape=none, label="···", pos="3.5,1!"];
+	8[shape=none, margin=0, label=<
+		<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+			<TR>
+				<TD>3Jo 1:15/23</TD>
+			</TR>
+			<TR>
+				<TD>a</TD>
+			</TR>
+		</TABLE>
+	>, pos="4.25,1!"];
+	9[shape=none, label="GA 2243", pos="0,0!"];
+	10[shape=none, margin=0, label=<
+		<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+			<TR>
+				<TD>3Jo 1:1/2</TD>
+				<TD>3Jo 1:1/6</TD>
+				<TD>3Jo 1:1/8</TD>
+			</TR>
+			<TR>
+				<TD>b</TD>
+				<TD>a</TD>
+				<TD>a</TD>
+			</TR>
+		</TABLE>
+	>, pos="2,0!"];
+	11[shape=none, label="···", pos="3.5,0!"];
+	12[shape=none, margin=0, label=<
+		<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+			<TR>
+				<TD>3Jo 1:15/23</TD>
+			</TR>
+			<TR>
+				<TD>a</TD>
+			</TR>
+		</TABLE>
+	>, pos="4.25,0!"];
+}

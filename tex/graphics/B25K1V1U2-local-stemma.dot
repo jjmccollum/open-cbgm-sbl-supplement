@@ -1,0 +1,15 @@
+digraph local_stemma {
+	margin=0;
+	subgraph cluster_legend {
+		passage [shape=plaintext, label="3Jo 1:1/2"];
+		readings [shape=plaintext, label="a: ο\lb: –\l"];
+		passage -> readings[style=invis];
+	}
+	subgraph cluster_plot {
+		style=invis;
+		node [shape=plaintext];
+		1 [label="a"];
+		2 [label="b"];
+		1 -> 2[style=solid];
+	}
+}

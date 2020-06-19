@@ -1,0 +1,20 @@
+digraph local_stemma {
+	subgraph cluster_legend {
+		label [shape=plaintext, label="3Jo 1:13/24-26"];
+	}
+	subgraph cluster_plot {
+		style=invis;
+		node [shape=plaintext];
+		1 [label="a"];
+		2 [label="b"];
+		3 [label="c"];
+		4 [label="cf"];
+		5 [label="d"];
+		6 [label="e"];
+		7 [label="f"];
+		1 -> 2[style=solid];
+		3 -> 1[style=solid];
+		3 -> 4[style=solid];
+		3 -> 5[style=solid];
+	}
+}

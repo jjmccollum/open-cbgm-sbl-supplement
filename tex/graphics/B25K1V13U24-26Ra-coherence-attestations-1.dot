@@ -1,0 +1,38 @@
+digraph textual_flow_diagram {
+	subgraph cluster_legend {
+		label [shape=plaintext, label="3Jo 1:13/24-26a\nCon = 10"];
+	}
+	subgraph cluster_plot {
+		style=invis;
+		node [shape=ellipse];
+		0 [label="A (a)"];
+		3 [label="01 (a)"];
+		5 [label="03 (a)"];
+		6 [label="04 (a)"];
+		16 [label="5 (a)"];
+		23 [label="69 (a)"];
+		25 [label="88 (a)"];
+		26 [label="93 (a)"];
+		29 [label="180 (a)"];
+		49 [label="442 (a)"];
+		58 [label="621 (a)"];
+		59 [label="623 (a)"];
+		66 [label="915 (a)"];
+		74 [label="1243 (a)"];
+		132 [label="L596 (a)"];
+		0 -> 3 [color=black];
+		0 -> 5 [color=black];
+		0 -> 6 [color=black];
+		59 -> 16 [color=black];
+		0 -> 23 [label="3", fontsize=10, color=black];
+		0 -> 25 [label="4", fontsize=10, color=black];
+		0 -> 26 [color=black];
+		0 -> 29 [label="7", fontsize=10, color=black];
+		132 -> 49 [color=black];
+		25 -> 58 [label="3", fontsize=10, color=black];
+		0 -> 59 [color=black];
+		25 -> 66 [color=black];
+		0 -> 74 [color=black];
+		0 -> 132 [color=black];
+	}
+}

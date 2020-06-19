@@ -1,0 +1,33 @@
+digraph potential_ancestors {
+	layout=neato;
+	margin=0;
+	node [shape=ellipse];
+
+	substemma_1_1832 [label="1832", pos="0,3!"];
+	substemma_1_2544 [label="2544", pos="1,3!"];
+	substemma_1_2243 [label="2243", pos="0.5,2!"];
+	substemma_1_1832 -> substemma_1_2243;
+	substemma_1_2544 -> substemma_1_2243;
+
+	substemma_2_1832 [label="1832", pos="3,3!"];
+	substemma_2_915 [label="915", pos="4,3!"];
+	substemma_2_2243 [label="2243", pos="3.5,2!"];
+	substemma_2_1832 -> substemma_2_2243;
+	substemma_2_915 -> substemma_2_2243;
+
+	substemma_3_1832 [label="1832", pos="6,3!"];
+	substemma_3_621 [label="621", pos="7,3!"];
+	substemma_3_2243 [label="2243", pos="6.5,2!"];
+	substemma_3_1832 -> substemma_3_2243;
+	substemma_3_621 -> substemma_3_2243;
+
+	substemma_4_L938 [label="L938", pos="2,1!"];
+	substemma_4_2243 [label="2243", pos="2,0!"];
+	substemma_4_L938 -> substemma_4_2243;
+
+	substemma_5_1832 [label="1832", pos="4.5,1!"];
+	substemma_5_467 [label="467", pos="5.5,1!"];
+	substemma_5_2243 [label="2243", pos="5,0!"];
+	substemma_5_1832 -> substemma_5_2243;
+	substemma_5_467 -> substemma_5_2243;
+}

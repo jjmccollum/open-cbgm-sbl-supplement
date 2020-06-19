@@ -1,0 +1,43 @@
+digraph local_stemma {
+	margin=0;
+	subgraph cluster_legend {
+		label [shape=plaintext, label="3Jo 1:4/2-10\l\la: μειζοτεραν τουτων ουκ εχω χαραν\laf1: μειζοτεραν την τουτων ουκ εχω χαραν\laf2: μειζοτεραν των ουκ εχω χαραν\lao: μειζονα τουτων ουκ εχω χαραν\lb: μειζοτεραν τουτων χαραν ουκ εχω\lc: μειζοτεραν χαραν τουτων ουκ εχω\ld: μειζοτεραν τουτου ουκ εχω χαραν\le: μειζοτεραν ταυτης χαραν ουκ εχω\lef1: μειζοτερον ταυτης χαραν ουκ εχω\lef2: μειζοτεραν ταυτην χαραν ουκ εχω\lf: μειζοτεραν χαραν ταυτης ουκ εχω\lg: μειζοτεραν ταυτης ουκ εχω χαραν\lgo: μειζονα ταυτης ουκ εχω χαραν\lh: μειζοτερας ουκ εχω ταυτης χαραν\li: μειζοτεραν τουτων ουκ εχω χαριν\lj: μειζοτεραν τουτων ουκ εχων χαριν\lk: μειζοτεραν τουτων χαριν ουκ εχω\ll: μειζοτεραν ταυτης χαριν ουκ εχω\lm: μειζοτεραν ταυτην ουκ εχω χαριν\ln: μειζονα τουτων εχω χαραν\lp: μειζοτεραν την τουτων χαριν\l"];
+	}
+	subgraph cluster_plot {
+		style=invis;
+		node [shape=plaintext];
+		1 [label="a"];
+		2 [label="af1"];
+		3 [label="af2"];
+		4 [label="ao"];
+		5 [label="b"];
+		6 [label="c"];
+		7 [label="d"];
+		8 [label="e"];
+		9 [label="ef1"];
+		10 [label="ef2"];
+		11 [label="f"];
+		12 [label="g"];
+		13 [label="go"];
+		14 [label="h"];
+		15 [label="i"];
+		16 [label="j"];
+		17 [label="k"];
+		18 [label="l"];
+		19 [label="m"];
+		20 [label="n"];
+		21 [label="p"];
+		22 [label="zw-a/i"];
+		23 [label="zw-b/k"];
+		1 -> 2[style=solid];
+		1 -> 3[style=solid];
+		1 -> 4[style=solid];
+		1 -> 22[style=dashed];
+		5 -> 23[style=dashed];
+		8 -> 9[style=solid];
+		8 -> 10[style=solid];
+		12 -> 13[style=solid];
+		15 -> 22[style=dashed];
+		17 -> 23[style=dashed];
+	}
+}

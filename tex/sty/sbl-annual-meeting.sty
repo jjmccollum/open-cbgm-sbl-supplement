@@ -185,6 +185,26 @@
 
 %Include support for footnote citation and citation format:
 \RequirePackage[style=sbl, citepages=omit, backend=biber]{biblatex}
+%Patch biblatex to fix ugly hyperref highlighting:
+\makeatletter
+\renewbibmacro*{shorttitle}{%
+  \iftoggle{blx@useshorttitle}
+    {\iffieldundef{shorttitle}
+       {\iffieldundef{title}
+          {}
+          {\ifbool{bbx@inset}
+             {\printtext{\bibhyperlink{\strfield{setkey}}
+                {\printtext[title]{\printfield[titlecase]{title}}}}}
+             {\printtext[title]{%
+                \printtext[bibhyperlink]{\printfield[titlecase]{title}}}}}}
+       {\ifbool{bbx@inset}
+          {\printtext{\bibhyperlink{\strfield{setkey}}
+             {\printtext[title]{\printfield[titlecase]{shorttitle}}}}}
+          {\printtext[title]{%
+             \printtext[bibhyperlink]{\printfield[titlecase]{shorttitle}}}}}%
+     \newunit}
+    {}}
+\makeatother
 
 %Modify page range citation style (include full page numbers):
 \setcounter{mincomprange}{100000} 

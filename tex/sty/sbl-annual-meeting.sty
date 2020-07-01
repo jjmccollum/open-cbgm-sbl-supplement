@@ -6,7 +6,7 @@
 \RequirePackage{amsfonts}
 \setmainfont[Ligatures=TeX, Numbers={OldStyle, Monospaced}]{Cochineal}
 \setmathfont(Digits,Latin,Greek)[Numbers={Lining, Monospaced}]{Cochineal}
-\setsansfont[Ligatures=TeX, Numbers={OldStyle, Monospaced}, Scale=MatchLowercase]{Acherus Grotesque}
+\setsansfont[Ligatures=TeX, Numbers={Monospaced}, Scale=MatchLowercase, ItalicFont=Acherus Grotesque Light Italic]{Acherus Grotesque Light}
 \newfontfamily\titlefont[Ligatures=TeX, Numbers={OldStyle, Monospaced}]{Acherus Grotesque Ultra Light}
 \newfontfamily\sectitlefont[Ligatures=TeX,Numbers={OldStyle, Monospaced}, Scale=MatchLowercase]{Gineso Cond Light}
 \newfontfamily\greekfont[Ligatures=TeX,Numbers={OldStyle, Monospaced}]{Cochineal}
@@ -36,8 +36,10 @@
 \RequirePackage{graphicx}
 %Include support for sideways figures:
 \RequirePackage{rotating}
-%Include support for multi-page figure captions:
+%Include support for caption formatting:
 \RequirePackage{caption}
+\DeclareCaptionFormat{sfcaption}{\sf\small#1#2#3}
+\captionsetup{format=sfcaption}
 %Include support for title formatting:
 \RequirePackage{titlesec}
 \titleformat{\section}{\sectitlefont\Large\raggedright}{\thesection}{1em}{}

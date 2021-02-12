@@ -13,9 +13,9 @@ digraph initial_incomplete {
 	node [shape=plaintext];
 	subgraph cluster_initial_incomplete {
 		margin=3.0;
-		1 [shape=circle, style=bold, color="#861F41", label="a"];
-		2 [shape=circle, style=bold, color=invis, label="b"];
 		3 [label="c"];
+		2 [shape=circle, style=bold, color=invis, label="b"];
+		1 [shape=circle, style=bold, color="#861F41", label="a"];
 		1 -> 2[style=solid];
 	}
 }
@@ -24,9 +24,9 @@ digraph no_initial_incomplete {
 	node [shape=plaintext];
 	subgraph cluster_no_initial_incomplete {
 		margin=3.0;
-		1 [label="a"];
-		2 [label="b"];
 		3 [label="c"];
+		2 [label="b"];
+		1 [label="a"];
 		1 -> 2[style=solid];
 	}
 }
